@@ -1,81 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Login - APIPay</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- BOOSTRAP 5 CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!-- Estilos propios -->
-    <link rel="stylesheet" href="./static/css/myStyle.css">
-  </head>
-  <body>
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6 text-center mb-5">
-            <h2 class="heading-section"></h2>
-          </div>
+<head>
+  <title>Login - APIPay</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- BOOSTRAP 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="./static/css/myStyle.css" />
+</head>
+
+<body>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section"></h2>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-5">
-            <div class="login-wrap p-4 p-md-5">
-              <div
-                class="icon d-flex align-items-center justify-content-center"
-              >
-                <span class="fa fa-user-o"></span>
-              </div>
-              <h3 class="text-center mb-4">Iniciar Sesión</h3>
-              <form action="#" class="login-form">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control rounded-left"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div class="form-group d-flex">
-                  <input
-                    type="password"
-                    class="form-control rounded-left"
-                    placeholder="Contraseña"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <button
-                    type="submit"
-                    class="btn btn-primary rounded submit p-3 px-5"
-                  >
-                    Ingresar
-                  </button>
-                </div>
-              </form>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="login-wrap p-4 p-md-5">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fa fa-user-o"></span>
             </div>
+            <h3 class="text-center mb-4">Iniciar Sesión</h3>
+            <form method="post" id="form" class="login-form">
+              <div class="form-group">
+                <input type="text" class="form-control rounded-left" placeholder="Email" id="email" required />
+              </div>
+              <div class="form-group d-flex">
+                <input type="password" class="form-control rounded-left" placeholder="Contraseña" id="password"
+                  required />
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary rounded submit p-3 px-5">
+                  Ingresar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  </body>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="./static/js/login.js"></script>
+</body>
+
 </html>

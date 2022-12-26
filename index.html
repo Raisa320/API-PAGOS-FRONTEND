@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard - APIPay</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+
+    <!-- BOOSTRAP 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./static/css/myStyle.css" />
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div class="loader" id="load">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="text-center loading">
+                <div class="spinner-grow text-blue"></div>
+                <div class="spinner-grow text-light-blue"></div>
+                <div class="spinner-grow text-light-x-blue"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: LOADER -->
+
+    <!-- HEADER -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light header">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">APIPay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <!-- MENU DE ACCIONES -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <!-- END: MENU -->
+
+                <!-- PROFILE USER -->
+                <ul class="nav nav-pills">
+                    <li class="nav-item dropdown pe-3">
+                        <div class="nav-link nav-profile d-flex align-items-center pe-0 show user"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            <img src="./static/img/iconUser.jpg"
+                                alt="Profile" class="rounded-circle">
+                            <div class="flex-grow-1 user">
+                                <span class="fw-semibold d-block" id="username"></span>
+                                <small><a class="text-decoration-none text-muted" role="button" id="logout">Cerrar Sesión</a></small>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- END: PROFILE USER -->
+            </div>
+        </div>
+    </nav>
+    <!-- END: HEADER -->
+
+    <!-- CONTENIDO PAGINA -->
+    <main id="main" class="main">
+        <!-- TITULO DE PAGE -->
+        <div class="card">
+            <div class="card-body pagetitle">
+                <h1>Dashboard</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- END:  TITULO DE PAGE -->
+
+        <section class="section dashboard">
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <div class="row">
+                        
+                        <div class="col-12">
+                            <div class="card recent-sales overflow-auto">
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                            class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Recent Sales <span>| Today</span>
+                                    </h5>
+
+                                    <table class="table table-borderless datatable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Customer</th>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><a href="#">#2457</a></th>
+                                                <td>Brandon Jacob</td>
+                                                <td>
+                                                    <a href="#" class="text-primary">At praesentium minu</a>
+                                                </td>
+                                                <td>$64</td>
+                                                <td>
+                                                    <span class="badge bg-success">Approved</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="#">#2147</a></th>
+                                                <td>Bridie Kessler</td>
+                                                <td>
+                                                    <a href="#" class="text-primary">Blanditiis dolor omnis
+                                                        similique</a>
+                                                </td>
+                                                <td>$47</td>
+                                                <td><span class="badge bg-warning">Pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="#">#2049</a></th>
+                                                <td>Ashleigh Langosh</td>
+                                                <td>
+                                                    <a href="#" class="text-primary">At recusandae consectetur</a>
+                                                </td>
+                                                <td>$147</td>
+                                                <td>
+                                                    <span class="badge bg-success">Approved</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="#">#2644</a></th>
+                                                <td>Angus Grady</td>
+                                                <td>
+                                                    <a href="#" class="text-primar">Ut voluptatem id earum et</a>
+                                                </td>
+                                                <td>$67</td>
+                                                <td><span class="badge bg-danger">Rejected</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="#">#2644</a></th>
+                                                <td>Raheem Lehner</td>
+                                                <td>
+                                                    <a href="#" class="text-primary">Sunt similique distinctio</a>
+                                                </td>
+                                                <td>$165</td>
+                                                <td>
+                                                    <span class="badge bg-success">Approved</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+    </main>
+    <!-- END: CONTENIDO -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./static/js/index.js"></script>
+</body>
+
+</html>

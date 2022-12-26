@@ -1,0 +1,52 @@
+function validarAuth(archivoRedirect) {
+  let token = localStorage.getItem("authTokens");
+  if (!token) {
+    window.location.href = archivoRedirect;
+  }
+}
+
+function validarToken(archivoRedirect) {
+  let token = localStorage.getItem("authTokens");
+  if (token) {
+    window.location.href = archivoRedirect;
+  }
+}
+
+function updateTokenInterval() {
+    let fourMinutes=1000*60*15 //15 minutos 
+    let interval = setInterval(() => {
+        updateToken();
+      }, fourMinutes);
+      return () => clearInterval(interval);
+}
+
+let updateToken = async () => {
+  console.log("UPDATE TOKEN CALLED");
+  let authTokens = JSON.parse(localStorage.getItem("authTokens"));
+
+  let response = await fetch("http://localhost:8000/api/v1/jwt/refresh/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ refresh: authTokens?.refresh }),
+  });
+  let data = await response.json();
+  if (response.status === 200) {
+    authTokens.access=data.access
+    localStorage.setItem("authTokens", JSON.stringify(authTokens));
+  } else {
+    logoutUser();
+  }
+//   if (loading) {
+//     setLoading(false);
+//   }
+};
+
+let logoutUser = () => {
+  localStorage.removeItem("authTokens");
+  localStorage.removeItem("user");
+  window.location.replace("./login.html");
+};
+
+export { validarAuth, validarToken, updateTokenInterval,logoutUser };

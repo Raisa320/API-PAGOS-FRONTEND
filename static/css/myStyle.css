@@ -26,12 +26,12 @@ body {
 .login-wrap h3 {
   font-weight: 700;
   font-size: 20px;
-  color: #8d448b;
+  color: #012970;
 }
 .login-wrap .icon {
   width: 80px;
   height: 80px;
-  background: #8d448b;
+  background: #4552ca;
   border-radius: 50%;
   font-size: 30px;
   margin: 0 auto;
@@ -106,7 +106,92 @@ body {
 }
 
 .btn.btn-primary {
-  background: #8d448b !important;
-  border: 1px solid #8d448b !important;
+  background: #4552ca !important;
+  border: 1px solid #4552ca !important;
   color: #fff !important;
+}
+
+.text-blue {
+  color: #1c4c96 !important;
+}
+
+.text-light-blue {
+  color: #427ed7 !important;
+}
+
+.text-light-x-blue {
+  color: #97bdf5 !important;
+}
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #f8f9fd;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.header {
+  transition: all 0.5s;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+  padding-left: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4552ca !important;
+  font-family: "Nunito", sans-serif;
+}
+.user {
+  margin-left: 8px;
+  font-weight: 600;
+  color: #4552ca !important;
+  line-height: 1;
+}
+
+.nav-profile img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 60px;
+  padding: 20px 30px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Page Title
+--------------------------------------------------------------*/
+.pagetitle {
+  padding-bottom: 0cm;
+}
+.pagetitle h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #4552ca;
+}
+
+.card {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgb(1 41 112 / 10%);
+  margin-bottom: 25px;
 }

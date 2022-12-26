@@ -1,4 +1,4 @@
-import { validarToken } from "./auth.js";
+import { validarToken,BASE_URL } from "./auth.js";
 import validate from "./validations.js";
 
 validarToken("index.html");
@@ -10,7 +10,7 @@ let loginUser = async (event) => {
   event.preventDefault();
   let validated = validate([email.value, password.value]);
   if (validated) {
-    let response = await fetch("http://127.0.0.1:8000/api/v2/login/", {
+    let response = await fetch(BASE_URL+"api/v2/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

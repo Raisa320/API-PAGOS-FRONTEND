@@ -1,3 +1,5 @@
+var BASE_URL="http://127.0.0.1:8000/"
+
 function validarAuth(archivoRedirect) {
   let token = localStorage.getItem("authTokens");
   if (!token) {
@@ -24,7 +26,7 @@ let updateToken = async () => {
   console.log("UPDATE TOKEN CALLED");
   let authTokens = JSON.parse(localStorage.getItem("authTokens"));
 
-  let response = await fetch("http://localhost:8000/api/v1/jwt/refresh/", {
+  let response = await fetch(BASE_URL+"api/v1/jwt/refresh/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -49,4 +51,4 @@ let logoutUser = () => {
   window.location.replace("./login.html");
 };
 
-export { validarAuth, validarToken, updateTokenInterval,logoutUser };
+export { validarAuth, validarToken, updateTokenInterval,logoutUser, BASE_URL };

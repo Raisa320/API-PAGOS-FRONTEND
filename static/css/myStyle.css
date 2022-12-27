@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
@@ -165,7 +165,7 @@ body {
 # Main
 --------------------------------------------------------------*/
 #main {
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 20px 30px;
   transition: all 0.3s;
 }
@@ -194,4 +194,67 @@ body {
   border-radius: 5px;
   box-shadow: 0px 0 30px rgb(1 41 112 / 10%);
   margin-bottom: 25px;
+}
+
+a:hover {
+  color: #4552ca;
+  text-decoration: none;
+}
+
+.sidebar-nav .nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4154f1 !important;
+  transition: 0.3;
+  background: #dfe8fb;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.sidebar-nav .nav-link.collapsed {
+  color: #012970 !important;
+  background: #fff;
+}
+
+.sidebar-nav .nav-link:hover {
+  color: #4154f1 !important;
+  background: #dfe8fb;
+}
+
+
+a{
+  color: #012970;
+  text-decoration: none;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  color: #899bbd;
+  font-weight: 600;
+}
+
+.breadcrumb a {
+  color: #899bbd;
+  transition: 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #51678f;
+}
+
+.breadcrumb .breadcrumb-item::before {
+  color: #899bbd;
+}
+
+.breadcrumb .active {
+  color: #51678f;
+  font-weight: 600;
+}
+
+
+.servicio img {
+  max-height: 40px;
 }

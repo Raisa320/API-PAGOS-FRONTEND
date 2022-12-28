@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard - APIPay</title>
+    <title>Pagos - APIPay</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -20,8 +20,8 @@
 </head>
 
 <body>
-    <!-- LOADER -->
-    <div class="loader" id="load">
+     <!-- LOADER -->
+     <div class="loader" id="load">
         <div class="position-absolute top-50 start-50 translate-middle">
             <div class="text-center loading">
                 <div class="spinner-grow text-blue"></div>
@@ -44,7 +44,7 @@
                 <!-- MENU DE ACCIONES -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item sidebar-nav">
-                        <a class="nav-link collapsed" aria-current="page" href="pagos.html">Pagos</a>
+                        <a class="nav-link" aria-current="page" href="pagos.html">Pagos</a>
                     </li>
                     <li class="nav-item sidebar-nav">
                         <a class="nav-link collapsed" href="servicios.html">Servicios</a>
@@ -77,11 +77,11 @@
         <!-- TITULO DE PAGE -->
         <div class="card">
             <div class="card-body pagetitle">
-                <h1>Dashboard</h1>
+                <h1>Pagos</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Pagos</li>
                     </ol>
                 </nav>
             </div>
@@ -90,94 +90,66 @@
 
         <section class="section dashboard">
             <div class="row">
-                <!-- PAGOS REALIZADOS -->
+                <!-- CARD DEL NUEVO PAGO -->
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <div class="card">
-                                <div class="card-header text-blue fw-bold fs-5 alert-success">Pagos Realizados</div>
+                                <div class="card-header text-blue fw-bold fs-5 alert-primary">Añadir Pago</div>
                                 <div class="card-body">
-                                    <!-- ITEMS DE PAGOS REALIZADOS -->
-                                    <div class="card alert-success">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                                <div class="servicio">
-                                                    <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                    <span class="ms-2">Servicio</span>
-                                                </div>
-                                                <div class="">Fecha de Pago</div>
-                                                <div class="">Monto</div>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="card alert-success">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                                <div class="servicio">
-                                                    <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                    <span class="ms-2">Servicio</span>
-                                                </div>
-                                                <div class="">Fecha de Pago</div>
-                                                <div class="">Monto</div>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <!-- END: ITEMS -->
-                                </div>
-                            </div>
-                        </div </div>
-                    </div>
-                    <!-- END:PAGOS REALIZADOS -->
+                                    <!-- FORMULARIO DE AÑADIR PAGO -->
+                                    <form>
 
-                    <!-- PAGOS VENCIDOS -->
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header text-blue fw-bold fs-5 alert-danger">Pagos Vencidos</div>
-                                    <div class="card-body">
-                                        <!-- ITEMS DE PAGOS VENCIDOS -->
-                                        <div class="card alert-danger">
-                                            <div class="card-body">
-                                                <div class="d-flex flex-row justify-content-between align-items-center">
-                                                    <div class="servicio">
-                                                        <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                        <span class="ms-2">Servicio</span>
-                                                    </div>
-                                                    <div class="">Fecha de Pago</div>
-                                                    <div class="">Monto</div>
-                                                    <div class="">Penalidad</div>
-                                                  </div>
+                                        <div class="row mb-3">
+                                            <label for="inputDate" class="col-sm-2 col-form-label">Fecha de
+                                                Vencimiento</label>
+                                            <div class="col-sm-10">
+                                                <input type="date" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="card alert-danger">
-                                            <div class="card-body">
-                                                <div class="d-flex flex-row justify-content-between align-items-center">
-                                                    <div class="servicio">
-                                                        <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                        <span class="ms-2">Servicio</span>
-                                                    </div>
-                                                    <div class="">Fecha de Pago</div>
-                                                    <div class="">Monto</div>
-                                                    <div class="">Penalidad</div>
-                                                  </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">Servicio</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" aria-label="Default select example">
+                                                    <option selected>Seleccionar Servicio</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <!-- END: ITEMS -->
-                                    </div>
+
+                                        <div class="row mb-3">
+                                            <label for="inputNumber" class="col-sm-2 col-form-label">Monto</label>
+                                            <div class="col-sm-10">
+                                                <input value="" type="number" step="any" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 text-center">
+
+                                            <div class="col-sm-12">
+                                                <div class="d-grid col-3 mx-auto">
+                                                    <button class="btn btn-primary" type="submit">Añadir</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <!-- END: FORMULARIO DE AÑADIR PAGO -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <!-- END: PAGOS VENCIDOS -->
+                    <!-- END:CARD DEL NUEVO PAGO -->
                 </div>
+            </div>
         </section>
     </main>
     <!-- END: CONTENIDO -->
 
-
-
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
@@ -185,6 +157,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script type="module" src="./static/js/index.js"></script>
+    
 </body>
 
 </html>

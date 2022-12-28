@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pagos - APIPay</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+
+    <!-- BOOSTRAP 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./static/css/myStyle.css" />
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div class="loader" id="load">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="text-center loading">
+                <div class="spinner-grow text-blue"></div>
+                <div class="spinner-grow text-light-blue"></div>
+                <div class="spinner-grow text-light-x-blue"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: LOADER -->
+
+    <!-- HEADER -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light header">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="index.html">APIPay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <!-- MENU DE ACCIONES -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item sidebar-nav">
+                        <a class="nav-link collapsed" aria-current="page" href="pagos.html">Pagos</a>
+                    </li>
+                    <li class="nav-item sidebar-nav">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                </ul>
+                <!-- END: MENU -->
+
+                <!-- PROFILE USER -->
+                <ul class="nav nav-pills">
+                    <li class="nav-item dropdown pe-3">
+                        <div class="nav-link nav-profile d-flex align-items-center pe-0 show user"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle" />
+                            <div class="flex-grow-1 user">
+                                <span class="fw-semibold d-block" id="username"></span>
+                                <small><a class="text-decoration-none text-muted" role="button" id="logout">Cerrar
+                                        Sesión</a></small>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- END: PROFILE USER -->
+            </div>
+        </div>
+    </nav>
+    <!-- END: HEADER -->
+
+    <!-- CONTENIDO PAGINA -->
+    <main id="main" class="main">
+        <!-- TITULO DE PAGE -->
+        <div class="card">
+            <div class="card-body pagetitle">
+                <h1>Servicios</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Servicios</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- END:  TITULO DE PAGE -->
+
+        <section class="section dashboard">
+            <div class="row">
+                <!-- CARD SERVICIOS -->
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body pt-3">
+                                    <!-- Bordered Tabs -->
+                                    <ul class="nav nav-tabs nav-tabs-bordered">
+                                        <li class="nav-item">
+                                            <button class="nav-link active" data-bs-toggle="tab"
+                                                data-bs-target="#servicio-agregar">
+                                                Añadir Servicio
+                                            </button>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#servicio-editar">
+                                                Modificar Servicio
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <!-- END: Bordered Tabs -->
+
+                                    <div class="tab-content pt-2">
+                                        <!-- TAB DE AÑADIR SERVICIO -->
+                                        <div class="tab-pane fade show active pt-3" id="servicio-agregar">
+                                            <!-- FORMULARIO DE AÑADIR SERVICIO    -->
+                                            <form class="me-2 ms-2">
+                                                <div class="row mb-3">
+                                                    <label for="inputNombre"
+                                                        class="col-sm-2 col-form-label">Nombre</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <label class="col-sm-2 col-form-label">Prefijo</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <label for="inputLogo" class="col-sm-2 col-form-label">Url
+                                                        Logo</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3 text-center">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-grid col-3 mx-auto">
+                                                            <button class="btn btn-primary" type="submit">
+                                                                Añadir
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <!-- END: FORMULARIO DE AÑADIR SERVICIO -->
+                                        </div>
+                                        <!-- END: TAB DE AÑADIR SERVICIO     -->
+                                        <!-- TAB DE MODIFICAR SERVICIO -->
+                                        <div class="tab-pane fade pt-3" id="servicio-editar">
+                                            <!-- FORMULARIO DE EDITAR SERVICIO -->
+                                            <form class="me-2 ms-2">
+                                                <div class="row mb-3">
+                                                    <label class="col-sm-2 col-form-label">Servicio</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control"
+                                                            aria-label="Default select example">
+                                                            <option selected>Seleccionar Servicio</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <label for="inputNombre2" class="col-sm-2 col-form-label">Nombre</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row mb-3">
+                                                    <label for="inputPrefix"
+                                                        class="col-sm-2 col-form-label">Prefijo</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                    <label for="inputUrl"
+                                                        class="col-sm-2 col-form-label">Logo</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-3 text-center">
+                                                    <div class="col-sm-12">
+                                                        <div class="d-grid col-3 mx-auto">
+                                                            <button class="btn btn-primary" type="submit">
+                                                                Modificar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <!-- END: FORMULARIO DE EDITAR SERVICIO         -->
+                                        </div>
+                                        <!-- END: TAB DE MODIFICAR SERVICIO     -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END:CARD SERVICIOS -->
+            </div>
+        </section>
+    </main>
+    <!-- END: CONTENIDO -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./static/js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,4 +1,5 @@
 var BASE_URL="http://127.0.0.1:8000/"
+var loading=true
 
 function validarAuth(archivoRedirect) {
   let token = localStorage.getItem("authTokens");
@@ -15,10 +16,14 @@ function validarToken(archivoRedirect) {
 }
 
 function updateTokenInterval() {
-    let fourMinutes=1000*60*15 //15 minutos 
+ 
+    if (loading) {
+      updateToken();
+    }
+    let fifteenMinutes=1000*60*15 //15 minutos 
     let interval = setInterval(() => {
         updateToken();
-      }, fourMinutes);
+      }, fifteenMinutes);
       return () => clearInterval(interval);
 }
 
@@ -40,9 +45,9 @@ let updateToken = async () => {
   } else {
     logoutUser();
   }
-//   if (loading) {
-//     setLoading(false);
-//   }
+  if (loading) {
+    loading=false;
+  }
 };
 
 let logoutUser = () => {

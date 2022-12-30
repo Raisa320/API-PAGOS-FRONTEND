@@ -1,4 +1,6 @@
-import { BASE_URL } from "./auth.js";
+import { BASE_URL,validarAdmin } from "./auth.js";
+validarAdmin('index.html');
+let token = JSON.parse(localStorage.getItem("authTokens"));
 
 function agregarServicios(serviciosList) {
   const servicios = document.getElementById("servicio");
@@ -10,7 +12,7 @@ function agregarServicios(serviciosList) {
   });
 }
 
-let token = JSON.parse(localStorage.getItem("authTokens"));
+
 let servicesGet = async () => {
   let response = await fetch(BASE_URL + "api/v2/services/", {
     method: "GET",

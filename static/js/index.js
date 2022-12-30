@@ -15,7 +15,9 @@ window.onload = function () {
     document.getElementById("username").innerHTML=user.username.toUpperCase();
     if (!user.isAdmin){
         let servicio = document.getElementById('serviceHeader')
+        let userHeader=document.getElementById('userHeader')
         servicio.outerHTML = ''
+        userHeader.outerHTML = ''
     }
 
     const logoutBtn = document.getElementById("logout");

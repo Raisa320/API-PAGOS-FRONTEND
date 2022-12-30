@@ -46,7 +46,7 @@
                     <li class="nav-item sidebar-nav">
                         <a class="nav-link collapsed" aria-current="page" href="pagos.html">Pagos</a>
                     </li>
-                    <li class="nav-item sidebar-nav">
+                    <li class="nav-item sidebar-nav" id="serviceHeader">
                         <a class="nav-link collapsed" href="servicios.html">Servicios</a>
                     </li>
                 </ul>
@@ -96,82 +96,36 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header text-blue fw-bold fs-5 alert-success">Pagos Realizados</div>
-                                <div class="card-body">
+                                <div class="card-body" id="pagosrealizados">
                                     <!-- ITEMS DE PAGOS REALIZADOS -->
-                                    <div class="card alert-success">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                                <div class="servicio">
-                                                    <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                    <span class="ms-2">Servicio</span>
-                                                </div>
-                                                <div class="">Fecha de Pago</div>
-                                                <div class="">Monto</div>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="card alert-success">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                                <div class="servicio">
-                                                    <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                    <span class="ms-2">Servicio</span>
-                                                </div>
-                                                <div class="">Fecha de Pago</div>
-                                                <div class="">Monto</div>
-                                              </div>
-                                        </div>
-                                    </div>
+                                    
+                                    
                                     <!-- END: ITEMS -->
                                 </div>
                             </div>
-                        </div </div>
-                    </div>
-                    <!-- END:PAGOS REALIZADOS -->
-
-                    <!-- PAGOS VENCIDOS -->
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header text-blue fw-bold fs-5 alert-danger">Pagos Vencidos</div>
-                                    <div class="card-body">
-                                        <!-- ITEMS DE PAGOS VENCIDOS -->
-                                        <div class="card alert-danger">
-                                            <div class="card-body">
-                                                <div class="d-flex flex-row justify-content-between align-items-center">
-                                                    <div class="servicio">
-                                                        <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                        <span class="ms-2">Servicio</span>
-                                                    </div>
-                                                    <div class="">Fecha de Pago</div>
-                                                    <div class="">Monto</div>
-                                                    <div class="">Penalidad</div>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <div class="card alert-danger">
-                                            <div class="card-body">
-                                                <div class="d-flex flex-row justify-content-between align-items-center">
-                                                    <div class="servicio">
-                                                        <img src="./static/img/iconUser.jpg" alt="Profile" class="rounded-circle">
-                                                        <span class="ms-2">Servicio</span>
-                                                    </div>
-                                                    <div class="">Fecha de Pago</div>
-                                                    <div class="">Monto</div>
-                                                    <div class="">Penalidad</div>
-                                                  </div>
-                                            </div>
-                                        </div>
-                                        <!-- END: ITEMS -->
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-                    <!-- END: PAGOS VENCIDOS -->
                 </div>
+                <!-- END:PAGOS REALIZADOS -->
+
+                <!-- PAGOS VENCIDOS -->
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header text-blue fw-bold fs-5 alert-danger">Pagos Vencidos</div>
+                                <div class="card-body" id="pagosvencidos">
+                                    <!-- ITEMS DE PAGOS VENCIDOS -->                                    
+                                    
+                                    <!-- END: ITEMS -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END: PAGOS VENCIDOS -->
+            </div>
         </section>
     </main>
     <!-- END: CONTENIDO -->
@@ -185,6 +139,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script type="module" src="./static/js/index.js"></script>
+    <script type="module" src="./static/js/dashboard.js"></script>
 </body>
 
 </html>

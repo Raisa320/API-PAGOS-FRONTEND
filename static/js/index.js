@@ -13,6 +13,10 @@ window.onload = function () {
     
     let user=JSON.parse(localStorage.getItem("user"));
     document.getElementById("username").innerHTML=user.username.toUpperCase();
+    if (!user.isAdmin){
+        let servicio = document.getElementById('serviceHeader')
+        servicio.outerHTML = ''
+    }
 
     const logoutBtn = document.getElementById("logout");
     logoutBtn.addEventListener("click", logoutUser);

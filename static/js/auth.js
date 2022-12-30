@@ -1,6 +1,13 @@
 var BASE_URL="http://127.0.0.1:8000/"
 var loading=true
 
+function validarAdmin (archivoRedirect){
+  let user=JSON.parse(localStorage.getItem("user"));
+  if (!user.isAdmin){
+    window.location.href = archivoRedirect;
+  }
+}
+
 function validarAuth(archivoRedirect) {
   let token = localStorage.getItem("authTokens");
   if (!token) {
@@ -56,4 +63,4 @@ let logoutUser = () => {
   window.location.replace("./login.html");
 };
 
-export { validarAuth, validarToken, updateTokenInterval,logoutUser, BASE_URL };
+export { validarAuth, validarToken, updateTokenInterval,logoutUser, BASE_URL, validarAdmin };

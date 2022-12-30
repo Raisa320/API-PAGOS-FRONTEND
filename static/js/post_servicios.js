@@ -1,4 +1,5 @@
-import { BASE_URL } from "./auth.js";
+import { BASE_URL,validarAdmin } from "./auth.js";
+validarAdmin('index.html');
 
 // Post de Servicios
 const formAdd = document.getElementById('form_add');
